@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haz login en Emplanorte</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+
+        <main>
+
+            <div class="contenedor__todo">
+                <div class="caja__trasera">
+                    <div class="caja__trasera-login">
+                        <h3>¿Ya tienes una cuenta?</h3>
+                        <p>Inicia sesión para entrar en la página</p>
+                        <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                    </div>
+                    <div class="caja__trasera-register">
+                        <h3>¿Aún no tienes una cuenta?</h3>
+                        <p>Regístrate para que puedas iniciar sesión</p>
+                        <button id="btn__registrarse">Regístrarse</button>
+                    </div>
+                </div>
+
+                <!--Formulario de Login y registro-->
+                <div class="contenedor__login-register">
+                    <!--Login-->
+                    <form id="loginForm"action="" class="formulario__login">
+                        <h2>Iniciar Sesión</h2>
+                        <input id="loginUsuario"type="text" placeholder="Usuario">
+                        <input id="loginPassword"type="password" placeholder="Contraseña">
+                        <button onclick="login()">Entrar</button>
+                    </form>
+
+                    <!--Register-->
+                    <form id="registroForm" action="" class="formulario__register">
+                        <h2>Regístrarse</h2>
+                        <input id="nombre" type="text" placeholder="Nombre completo">
+                        <input id="telefono" type="text" placeholder="Telefono">
+                        <input id="usuario" type="text" placeholder="Usuario">
+                        <input id="password" type="password" placeholder="Contraseña">
+                        <button onclick="registro()" >Regístrarse</button>
+                    </form>
+
+                    
+                </div>
+
+            </div>
+            <div>
+                <p id="mensaje"></p>
+                <style>
+                    #mensaje {
+                    position: fixed;
+                    bottom: 20px; /* Distancia desde la parte inferior de la pantalla */
+                    left: 50%; /* Centrado horizontal */
+                    transform: translateX(-50%); /* Corrección para asegurar que el mensaje esté completamente centrado */
+                    padding: 10px;
+                    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+                    color: white; /* Color del texto */
+                    border-radius: 5px; /* Bordes redondeados */
+                    font-size: 16px; /* Tamaño de fuente */
+                    z-index: 1000; /* Asegura que el mensaje esté sobre otros elementos */
+                }
+                </style>
+            </div>
+
+        </main>
+
+
+        <script src="assets/js/script.js"></script>
+</body>
+</html>
